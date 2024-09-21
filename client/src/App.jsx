@@ -158,3 +158,16 @@ function App() {
 }
 
 export default App
+
+
+/*
+  const data = {
+    home: [],
+    spidey_squad: [
+      {name: "Aakarshit Saxen", score: 500}
+    ],
+    tony_techies: [],
+    cap_crusader: [],
+    odinson_olmpians: []
+  }
+*/
