@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import AllScoresContext from '../contexts/AllScoresContext';
 import PlayerScoreCard from './PlayerScoreCard';
-import bgVideo from "../../assets/leaderboard-bg.mp4";
+// import bgVideo from "../../assets/leaderboard-bg.mp4";
 import jarvisImg from "../../assets/jarvis.png";
-import bgLoad from "../../assets/leaderboard-bg-load.png";
-import { all } from 'axios';
+// import bgLoad from "../../assets/leaderboard-bg-load.png";
+// import { all } from 'axios';
 
 const Scores = () => {
   const videoRef = useRef(null);

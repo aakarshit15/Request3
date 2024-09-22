@@ -114,7 +114,7 @@ const Navbar = () => {
           <NavLink to="/team/odinson_olympians" className='tab flex justify-center items-center xl:text-2xl text-lg px-2 text-white font-light'>Thor</NavLink>
         </div>
       </nav>
-        <div className={`menu flex flex-col justify-center items-center gap-2 bg-gradient-to-r from-[#343843] to-[#838D89] border-b-2 border-b-[#FFFFFF] ${!menuVisible && "hidden"}`}>
+        <div className={`menu flex flex-col justify-center items-center gap-2 pb-2 bg-gradient-to-r from-[#343843] to-[#838D89] border-b-2 border-b-[#FFFFFF] ${!menuVisible && "hidden"}`}>
           <NavLink to="/team/spidey_squad" className='tab flex justify-center items-center text-xl px-2 text-white font-light'>Spider-Man</NavLink>
           <NavLink to="/team/tony_techies" className='tab flex justify-center items-center text-xl px-2 text-white font-light'>Iron Man</NavLink>
           <NavLink to="/team/cap_crusader" className='tab flex justify-center items-center text-xl px-2 text-white font-light'>Captain America</NavLink>
