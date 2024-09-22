@@ -81,14 +81,22 @@
 // export default Navbar;
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import logo from "../../assets/logo.png";
 import { Link, NavLink } from 'react-router-dom';
+import cross from "../../assets/cross.svg";
 
 const Navbar = () => {
+
+  const [menuVisible, setMenuVisibile] = useState(false);
+
+  const toogleMenuVisible = () => {
+    setMenuVisibile(!menuVisible);
+  }
+
   return (
     <>
-      <nav className='flex flex-wrap justify-between items-center py-2 px-4 md:px-8 lg:px-16 w-full min-w-full bg-gradient-to-r from-[#343843] to-[#838D89] border-b-2 border-b-[#FFFFFF]'>
+      <nav className= {`flex flex-wrap justify-between items-center py-2 px-4 md:px-8 lg:px-16 w-full min-w-full bg-gradient-to-r from-[#343843] to-[#838D89] ${!menuVisible && "border-b-2 border-b-[#FFFFFF]"}`}>
         <Link to="/home">
           <img
             src={logo}
@@ -97,15 +105,21 @@ const Navbar = () => {
           />
         </Link>
         <div className="menu-icon-div">
-          <img src="https://img.icons8.com/?size=100&id=59832&format=png&color=000000" className='w-10 sm:hidden' alt="menu icon" />
+          <img src={menuVisible ? cross : `https://img.icons8.com/?size=100&id=59832&format=png&color=000000`} className='w-7 sm:hidden' alt="menu icon" onClick={toogleMenuVisible} />
         </div>
-        <div className="tabs hidden sm:flex flex-wrap justify-between gap-4 lg:gap-8">
+        <div className={`tabs hidden sm:flex flex-wrap justify-between gap-4 lg:gap-8`}>
           <NavLink to="/team/spidey_squad" className='tab flex justify-center items-center xl:text-2xl text-lg px-2 text-white font-light'>Spider-Man</NavLink>
           <NavLink to="/team/tony_techies" className='tab flex justify-center items-center xl:text-2xl text-lg px-2 text-white font-light'>Iron Man</NavLink>
           <NavLink to="/team/cap_crusader" className='tab flex justify-center items-center xl:text-2xl text-lg px-2 text-white font-light'>Captain America</NavLink>
           <NavLink to="/team/odinson_olympians" className='tab flex justify-center items-center xl:text-2xl text-lg px-2 text-white font-light'>Thor</NavLink>
         </div>
       </nav>
+        <div className={`menu flex flex-col justify-center items-center gap-2 bg-gradient-to-r from-[#343843] to-[#838D89] border-b-2 border-b-[#FFFFFF] ${!menuVisible && "hidden"}`}>
+          <NavLink to="/team/spidey_squad" className='tab flex justify-center items-center text-xl px-2 text-white font-light'>Spider-Man</NavLink>
+          <NavLink to="/team/tony_techies" className='tab flex justify-center items-center text-xl px-2 text-white font-light'>Iron Man</NavLink>
+          <NavLink to="/team/cap_crusader" className='tab flex justify-center items-center text-xl px-2 text-white font-light'>Captain America</NavLink>
+          <NavLink to="/team/odinson_olympians" className='tab flex justify-center items-center text-xl px-2 text-white font-light'>Thor</NavLink>
+        </div>
     </>
   )
 }

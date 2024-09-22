@@ -17,9 +17,9 @@
     font-family: "MarvelFont";
 } */
 
-.team-name {
+/* .team-name {
     max-width: 400px;
-}
+} */
 
 /* .team-lname {
     color: #838383;
@@ -50,17 +50,17 @@
 } */
 
 .bg-container {
-    /* position: relative; */
+    /* position: relative;
     height: 100%;
     min-height: 100vh;
-    overflow: visible;
+    overflow: visible; */
     background-image: url('../assets/leaderboard-bg.gif');
-    background-attachment: fixed;
+    /* background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: cover;
     margin: 0;
-    /* background-size: contain; */
+    background-size: contain; */
   }
 
   /* body {
@@ -73,8 +73,8 @@
     margin: 0; /* Remove any default margin */
   }
 
-  .bg-video {
-    /* position: absolute; */
+  /* .bg-video {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -84,7 +84,7 @@
     z-index: -1;
     background-size: cover;
     background-position: center;
-}
+} */
 
 /* .player-score-card > * {
    font-family: "Krona One";
