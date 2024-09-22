@@ -6,6 +6,7 @@ const Template = () => {
   return (
     <>
         <Navbar />
+        {/* <div className='w-full h-full bg-black'>dkfljsf</div> */}
         <Outlet /> 
     </>
   )

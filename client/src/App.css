@@ -9,60 +9,93 @@
     font-style: normal;
 }
 
-* {
+/* * {
     color: #D9D9D9;
-}
+} */
 
-.table-head > td, .team-name {
+/* .table-head > td, .team-name {
     font-family: "MarvelFont";
-}
+} */
 
 .team-name {
     max-width: 400px;
 }
 
-.team-lname {
+/* .team-lname {
     color: #838383;
     border-top: 4px solid #838383;
     border-bottom: 4px solid #838383;
-}
+} */
 
-.bg-container {
+/* .bg-container {
     position: relative;
     height: 100vh;
+    width: 100%;
     overflow: hidden;
     background-image: url('../assets/leaderboard-bg.mp4');
-}
+} */
 
-.bg-video {
+/* .bg-video {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
+  top: -100px;
+  left: -100px; */
+  /* width: 100%;
+  height: 100%; */
   /* width: auto;
   height: auto; */
-  z-index: -1;
+  /* z-index: -1; */
   /* transform: translate(-50%, -50%); */
-  background-size: cover;
+  /* background-size: cover;
   background-position: center;
+} */
+
+.bg-container {
+    /* position: relative; */
+    height: 100%;
+    min-height: 100vh;
+    overflow: visible;
+    background-image: url('../assets/leaderboard-bg.gif');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin: 0;
+    /* background-size: contain; */
+  }
+
+  /* body {
+    overflow: hidden;
+  } */
+  
+  body {
+    height: 100%; /* Ensure the body takes full height */
+    overflow-y: scroll; /* Use the body scroll bar */
+    margin: 0; /* Remove any default margin */
+  }
+
+  .bg-video {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
 }
 
-.player-score-card > * {
+/* .player-score-card > * {
    font-family: "Krona One";
    font-weight: 500;
-}
+} */
 
 /* .name {
     font-weight: 100;
 } */
 
 .active{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    border: 2px solid black;
-    border-radius: 20px;
-    min-width: 150px;
+    opacity: 100%;
+    text-decoration: underline;
 }
