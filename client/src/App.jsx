@@ -142,11 +142,7 @@ function App() {
       //   ]
       // }
   
-      console.log(response.data);
       const data = response.data;
-  
-      // const obj = JSON.parse(body);
-  
   
       setAllScores(data);
       
